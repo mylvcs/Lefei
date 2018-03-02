@@ -63,7 +63,7 @@ import java.util.UUID;
 
 public class TravelerEditorActivity extends AppCompatActivity {
 
-    /**
+    /**TODO
      * EditText field to enter the pet's name
      */
     private EditText mNameEditText;
@@ -93,7 +93,7 @@ public class TravelerEditorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_editor);
 
         // Find all relevant views that we will need to read user input from
-//        mNameEditText = (EditText) findViewById(R.id.edit_pet_name);
+       mNameEditText = (EditText) findViewById(R.id.departure);
 //        mBreedEditText = (EditText) findViewById(R.id.edit_pet_breed);
 //        mWeightEditText = (EditText) findViewById(R.id.edit_pet_weight);
 //        mGenderSpinner = (Spinner) findViewById(R.id.spinner_gender);
@@ -149,9 +149,9 @@ public class TravelerEditorActivity extends AppCompatActivity {
         // Read from input fields
         // Use trim to eliminate leading or trailing white space
         String nameString = mNameEditText.getText().toString().trim();
-        String breedString = mBreedEditText.getText().toString().trim();
-        String weightString = mWeightEditText.getText().toString().trim();
-        int weight = Integer.parseInt(weightString);
+   //     String breedString = mBreedEditText.getText().toString().trim();
+    //    String weightString = mWeightEditText.getText().toString().trim();
+    //    int weight = Integer.parseInt(weightString);
 
         // Create database helper
         TravelerDbHelper mDbHelper = new TravelerDbHelper(this);
@@ -164,9 +164,9 @@ public class TravelerEditorActivity extends AppCompatActivity {
         ContentValues values = new ContentValues();
         values.put(TravelerEntry.COLUMN_NAME, nameString);
         //TODO
-        //     values.put(TravelerEntry._ID, UUID);
+        //    values.put(TravelerEntry._ID, UUID);
 //        values.put(TravelerEntry.COLUMN_PET_BREED, breedString);
-//        values.put(TravelerEntry.COLUMN_PET_GENDER, mGender);
+ //        values.put(TravelerEntry.COLUMN_GENDER, mGender);
 //        values.put(TravelerEntry.COLUMN_PET_WEIGHT, weight);
 
         // Insert a new row for pet in the database, returning the ID of that new row.

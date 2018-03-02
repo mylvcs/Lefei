@@ -43,11 +43,12 @@ public class TravelerDbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         // Create a String that contains the SQL statement to create the pets table
         String SQL_CREATE_PETS_TABLE = "CREATE TABLE " + TABLE_NAME + " ("
-      //            + TravelerEditorActivity._ + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                +TravelerContract.TravelerEntry.COLUMN_NAME+ " INTEGER PRIMARY KEY AUTOINCREMENT, "
 //                + TravelerEditor.COLUMN_PET_NAME + " TEXT NOT NULL, "
 //                + TravelerEditor.COLUMN_PET_BREED + " TEXT, "
 //                + TravelerEditor.COLUMN_PET_GENDER + " INTEGER NOT NULL, "
 //                + TravelerEditor.COLUMN_PET_WEIGHT + " INTEGER NOT NULL DEFAULT 0);"
+           //TODO     +TravelerEditorActivity.
 
                 ;
 

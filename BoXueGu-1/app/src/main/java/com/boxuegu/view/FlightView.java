@@ -31,7 +31,7 @@ public class FlightView {
     private AdBannerAdapter ada;// 适配器
     public static final int MSG_AD_SLID = 002;// 广告自动滑动
     private ViewPagerIndicator vpi;// 小圆点
-    private MHandler mHandler;// 事件捕获
+ //   private MHandler mHandler;// 事件捕获
     private List<FlightBean> cadl;
     public FlightView(FragmentActivity context) {
         mContext = context;
@@ -39,90 +39,93 @@ public class FlightView {
         mInflater = LayoutInflater.from(mContext);
     }
     private void createView() {
-        mHandler = new MHandler();
-        initAdData();
-        getFlightData();
+        //        mHandler = new MHandler();
+//        initAdData();
+//        getFlightData();
         initView();
-        new AdAutoSlidThread().start();
+//        new AdAutoSlidThread().start();
+//    }
+//    /**
+//     * 事件捕获
+//     */
+//    class MHandler extends Handler {
+//        @Override
+//        public void dispatchMessage(Message msg) {
+//            super.dispatchMessage(msg);
+//            switch (msg.what) {
+//                case MSG_AD_SLID:
+//                    if (ada.getCount() > 0) {
+//                        adPager.setCurrentItem(adPager.getCurrentItem() + 1);
+//                    }
+//                    break;
+//            }
+//        }
+//    }
+//    /**
+//     * 广告自动滑动
+//     */
+//    class AdAutoSlidThread extends Thread {
+//        @Override
+//        public void run() {
+//            super.run();
+//            while (true) {
+//                try {
+//                    sleep(5000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//                if (mHandler != null)
+//                    mHandler.sendEmptyMessage(MSG_AD_SLID);
+//            }
+//        }
+//    }
     }
-    /**
-     * 事件捕获
-     */
-    class MHandler extends Handler {
-        @Override
-        public void dispatchMessage(Message msg) {
-            super.dispatchMessage(msg);
-            switch (msg.what) {
-                case MSG_AD_SLID:
-                    if (ada.getCount() > 0) {
-                        adPager.setCurrentItem(adPager.getCurrentItem() + 1);
-                    }
-                    break;
-            }
+        /**
+         * 初始化控件
+         */
+        private void initView(){
+            mCurrentView = mInflater.inflate(R.layout.main_view_flight, null);
+            lv_list = (ListView) mCurrentView.findViewById(R.id.lv_list);
+            adapter = new FlightAdapter(mContext);
+            adapter.setData(cbl);
+       //     lv_list.setAdapter(adapter);
+        //    adPager = (ViewPager) mCurrentView.findViewById(R.id.vp_advertBanner);
+          //  adPager.setLongClickable(false);
+            //   ada = new AdBannerAdapter(mContext.getSupportFragmentManager(),
+            //            mHandler);
+      //      adPager.setAdapter(ada);// 给ViewPager设置适配器
+      //      adPager.setOnTouchListener(ada);
+//            vpi = (ViewPagerIndicator) mCurrentView
+//                    .findViewById(R.id.vpi_advert_indicator);// 获取广告条上的小圆点
+//            vpi.setCount(ada.getSize());// 设置小圆点的个数
+//            adBannerLay = mCurrentView.findViewById(R.id.rl_adBanner);
+//            adPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+//                @Override
+//                public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+//                }
+//
+//                @Override
+//                public void onPageSelected(int position) {
+//                    if (ada.getSize() > 0) {
+//                        //由于index数据在滑动时是累加的，因此用index % ada.getSize()来标记滑动到的当前位置
+//                        vpi.setCurrentPosition(position % ada.getSize());
+//                    }
+//                }
+//
+//                @Override
+//                public void onPageScrollStateChanged(int state) {
+//
+//                }
+//            });
+          //  resetSize();
+//            if (cadl != null) {
+//                if (cadl.size() > 0) {
+//                    vpi.setCount(cadl.size());
+//                    vpi.setCurrentPosition(0);
+//                }
+//                ada.setDatas(cadl);
+//            }
         }
-    }
-    /**
-     * 广告自动滑动
-     */
-    class AdAutoSlidThread extends Thread {
-        @Override
-        public void run() {
-            super.run();
-            while (true) {
-                try {
-                    sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                if (mHandler != null)
-                    mHandler.sendEmptyMessage(MSG_AD_SLID);
-            }
-        }
-    }
-    /**
-     * 初始化控件
-     */
-    private void initView() {
-        mCurrentView = mInflater.inflate(R.layout.main_view_flight, null);
-        lv_list = (ListView) mCurrentView.findViewById(R.id.lv_list);
-        adapter = new FlightAdapter(mContext);
-        adapter.setData(cbl);
-        lv_list.setAdapter(adapter);
-        adPager = (ViewPager) mCurrentView.findViewById(R.id.vp_advertBanner);
-        adPager.setLongClickable(false);
-        ada = new AdBannerAdapter(mContext.getSupportFragmentManager(),
-                mHandler);
-        adPager.setAdapter(ada);// 给ViewPager设置适配器
-        adPager.setOnTouchListener(ada);
-        vpi = (ViewPagerIndicator) mCurrentView
-                .findViewById(R.id.vpi_advert_indicator);// 获取广告条上的小圆点
-        vpi.setCount(ada.getSize());// 设置小圆点的个数
-        adBannerLay = mCurrentView.findViewById(R.id.rl_adBanner);
-        adPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-            }
-            @Override
-            public void onPageSelected(int position) {
-                if (ada.getSize() > 0) {
-                    //由于index数据在滑动时是累加的，因此用index % ada.getSize()来标记滑动到的当前位置
-                    vpi.setCurrentPosition(position % ada.getSize());
-                }
-            }
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
-        resetSize();
-        if (cadl != null) {
-            if (cadl.size() > 0) {
-                vpi.setCount(cadl.size());
-                vpi.setCurrentPosition(0);
-            }
-            ada.setDatas(cadl);
-        }
-    }
     /**
      * 计算控件大小
      */
@@ -167,9 +170,7 @@ public class FlightView {
             cadl.add(bean);
         }
     }
-    /**
-     * 获取课程信息
-     */
+
     private void getFlightData() {
         try {
             InputStream is = mContext.getResources().getAssets().open("chaptertitle.xml");
