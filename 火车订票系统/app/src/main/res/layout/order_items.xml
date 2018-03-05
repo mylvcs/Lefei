@@ -1,0 +1,228 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+     >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/order_list_item"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="#3594dd" >
+
+            <TextView
+                android:id="@+id/orders_id1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="订单编号："
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/orders_id2"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/orders_id1"
+                android:gravity="center_vertical"
+                android:text="订单编号11111"
+                android:textColor="#edb04f" />
+             <TextView
+                android:id="@+id/orders_date"
+                android:layout_toRightOf="@+id/orders_id2"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="日期："
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/orders_date1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/orders_date"
+                android:gravity="center_vertical"
+                android:text="2014-9-23"
+                android:textColor="#edb04f" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="出发站: " />
+
+            <TextView
+                android:id="@+id/orders_start_station"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="start车站"
+                android:textColor="#edb04f" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="35dp"
+                android:text="出发时间: " />
+
+            <TextView
+                android:id="@+id/orders_start_TIME"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="starttime"
+                android:textColor="#edb04f" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="到达站: " />
+
+            <TextView
+                android:id="@+id/orders_arrive_station1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="arrive车站"
+                android:textColor="#edb04f" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="35dp"
+                android:text="到达时间: " />
+
+            <TextView
+                android:id="@+id/orders_arrive_TIME"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="arrivetime"
+                android:textColor="#edb04f" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="乘客姓名:" />
+
+            <TextView
+                android:id="@+id/orders_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="乘客姓名:"
+                android:textColor="#edb04f" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="35dp"
+                android:text="车次:" />
+
+            <TextView
+                android:id="@+id/orders_stationCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="5dp"
+                android:text="车次"
+                android:textColor="#edb04f" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="票价:" />
+
+            <TextView
+                android:id="@+id/orders_costPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="5dp"
+                android:text="price"
+                android:textColor="#edb04f" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="身份证号:" />
+
+            <TextView
+                android:id="@+id/orders_idNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4203333"
+                android:textColor="#edb04f" />
+               <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:text="车票状态:" />
+
+            <TextView
+                android:id="@+id/status_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="改签票/已支付"
+                android:textColor="#edb04f" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/line" />
+    </LinearLayout>
+
+</RelativeLayout>

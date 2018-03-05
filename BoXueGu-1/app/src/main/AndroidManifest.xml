@@ -31,13 +31,7 @@
         </activity>
         <activity android:name=".activity.ChangeUserInfoActivity" >
         </activity>
-        <activity android:name=".activity.PlayHistoryActivity" >
-        </activity>
-        <activity android:name=".activity.VideoPlayActivity" >
-        </activity>
         <activity android:name=".activity.ExercisesDetailActivity" >
-        </activity>
-        <activity android:name=".activity.VideoListActivity" >
         </activity>
         <activity android:name=".activity.SettingActivity" >
         </activity>
@@ -46,6 +40,11 @@
         <activity android:name=".activity.FindPswActivity" >
         </activity>
         <activity android:name=".sqlite.TravelerEditorActivity" >
+        </activity>
+        <activity android:name=".activity.FlightActivity">
+        </activity>
+        <activity android:name=".activity.CityActivity">
+
         </activity>
     </application>
 

@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_order"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_bg" >
+
+        <Button
+            android:id="@+id/returnMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="首页"
+            android:textColor="#ffff"
+            android:textSize="12sp" 
+            />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="订单管理"
+            android:textColor="#ffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+  <Button
+        android:id="@+id/button_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/relativeLayout_order"
+        android:gravity="left|center_vertical"
+        android:text="已完成订单" />
+    <Button
+        android:id="@+id/button_cancelTicket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_finish"
+        android:gravity="left|center_vertical"
+        android:text="退票" />
+
+     <Button
+        android:id="@+id/button_changeTicket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_cancelTicket"
+        android:gravity="left|center_vertical"
+        android:text="改签" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/button_finish"
+        android:layout_marginBottom="40dp"
+        android:gravity="bottom" >
+
+        <TextView
+            android:id="@+id/prompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="温馨提示：" />
+
+        <TextView
+            android:id="@+id/prompt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prompt"
+            android:layout_marginLeft="8dp"
+            android:text="1.订单信息在本系统保存期限不少于30日。" />
+
+        <TextView
+            android:id="@+id/prompt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prompt1"
+            android:layout_marginLeft="8dp"
+            android:text="2.本应用仅办理不晚于开车前2小时尚未换取纸质车票的退票、改签业务。" />
+
+        <TextView
+            android:id="@+id/prompt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prompt2"
+            android:layout_marginLeft="8dp"
+            android:text="3.在本应用办理退票，只能逐次单张办理。" />
+
+        <TextView
+            android:id="@+id/prompt4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prompt3"
+            android:layout_marginLeft="8dp"
+            android:text="4.车票只能改签一次，已经改签的车票不能再次改签。" />
+    </RelativeLayout>
+
+</RelativeLayout>

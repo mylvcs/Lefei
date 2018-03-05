@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Relative_queryRes"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/list_back_pic" >
+    <RelativeLayout
+        android:id="@+id/relativeLayout_my12306"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_bg" >
+ <Button
+            android:id="@+id/returnBooking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车票预定"
+            android:textColor="#ffff"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="查询结果"
+            android:textColor="#ffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    <RelativeLayout 
+        android:id="@+id/relativeLayout_resultListView"
+        android:layout_below="@id/relativeLayout_my12306"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ListView
+        android:id="@+id/query_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="#ffcccccc"
+        android:dividerHeight="1.0dip"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:scrollbars="none" 
+        />
+</RelativeLayout>
+
+</RelativeLayout>

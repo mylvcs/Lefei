@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.List;
-import com.boxuegu.activity.VideoPlayActivity;
+
 import com.boxuegu.bean.VideoBean;
 import com.boxuegu.R;
 public class PlayHistoryAdapter extends BaseAdapter {
@@ -109,9 +109,9 @@ public class PlayHistoryAdapter extends BaseAdapter {
 			public void onClick(View v) {
 				if (bean == null) return;
 				//跳转到播放视频界面
-				Intent intent=new Intent(mContext,VideoPlayActivity.class);
-				intent.putExtra("videoPath", bean.videoPath);
-				mContext.startActivity(intent);
+	//			Intent intent=new Intent(mContext,VideoPlayActivity.class);
+	//			intent.putExtra("videoPath", bean.videoPath);
+	//			mContext.startActivity(intent);
 			}
 		});
 		return convertView;

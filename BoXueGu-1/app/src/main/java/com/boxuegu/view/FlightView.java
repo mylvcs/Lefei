@@ -15,13 +15,13 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import com.boxuegu.R;
 import com.boxuegu.adapter.AdBannerAdapter;
-import com.boxuegu.adapter.FlightAdapter;
+//import com.boxuegu.adapter.FlightAdapter;
 import com.boxuegu.bean.FlightBean;
 import com.boxuegu.bean.FlightBean;
 import com.boxuegu.utils.AnalysisUtils;
 public class FlightView {
     private ListView lv_list;
-    private FlightAdapter adapter;
+ //   private FlightAdapter adapter;
     private List<List<FlightBean>> cbl;
     private FragmentActivity mContext;
     private LayoutInflater mInflater;
@@ -85,9 +85,9 @@ public class FlightView {
          */
         private void initView(){
             mCurrentView = mInflater.inflate(R.layout.main_view_flight, null);
-            lv_list = (ListView) mCurrentView.findViewById(R.id.lv_list);
-            adapter = new FlightAdapter(mContext);
-            adapter.setData(cbl);
+    //        lv_list = (ListView) mCurrentView.findViewById(R.id.lv_list);
+    //        adapter = new FlightAdapter(mContext);
+   //         adapter.setData(cbl);
        //     lv_list.setAdapter(adapter);
         //    adPager = (ViewPager) mCurrentView.findViewById(R.id.vp_advertBanner);
           //  adPager.setLongClickable(false);

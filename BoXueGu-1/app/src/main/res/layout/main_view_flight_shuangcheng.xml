@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+
+    <RelativeLayout
+            android:layout_marginTop="80dp"
+            android:id="@+id/rl_title_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/btn_left"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/left_button_null_click_shape"
+                android:text="单程" />
+
+            <Button
+                android:id="@+id/btn_right"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:textColor="#157EFB"
+                android:layout_toRightOf="@+id/btn_left"
+                android:background="@drawable/right_button_click_shape"
+                android:text="往返" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="30dp">
+
+
+            <EditText
+                android:id="@+id/departure"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="出发城市"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/arrive"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:hint="到达城市"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/flight_date"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimaryDark"
+                android:hint="日期"
+                android:inputType="textEmailAddress" />
+
+            <android.support.v7.widget.AppCompatSpinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:hint="经济舱"
+                >
+
+
+
+            </android.support.v7.widget.AppCompatSpinner>
+
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="10dp"
+                android:padding="12dp"
+                android:text="搜索" />
+
+        </LinearLayout>
+
+
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#E4E4E4" />
+    <ListView
+        android:id="@+id/lv_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="55dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:scrollbars="none" />
+</LinearLayout>
