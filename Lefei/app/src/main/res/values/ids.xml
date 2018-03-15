@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="edit_user_name" type="id">Username</item>
+    <item name="spinner_gender" type="id">Gender</item>
+
+    <item name="btn_right" type="id">多程</item>
+    <item name="btn_left" type="id" >单程</item>
+
+
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:fitsSystemWindows="true">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="56dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
+
+
+    <EditText
+        android:id="@+id/departure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="出发城市" />
+
+    <EditText
+        android:id="@+id/arrive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="到达城市" />
+
+    <EditText
+        android:id="@+id/flight_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="日期"
+        android:inputType="textEmailAddress" />
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:padding="12dp"
+        android:text="搜索"/>
+
+</LinearLayout>
+</ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/ly_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rd_group"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rd_menu_deal"
+            style="@style/tab_menu_item"
+            android:text="点餐"/>
+
+        <RadioButton
+            android:id="@+id/rd_menu_poi"
+            style="@style/tab_menu_item"
+
+
+            android:text="商铺"/>
+
+        <RadioButton
+            android:id="@+id/rd_menu_more"
+            style="@style/tab_menu_item"
+
+            android:text="更多"/>
+
+        <RadioButton
+            android:id="@+id/rd_menu_user"
+            style="@style/tab_menu_item"
+
+            android:text="用户"/>
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rd_group"
+        android:layout_below="@id/ly_top_bar">
+
+        <TextView
+            android:id="@+id/txt_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="信息"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lefei</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="departure">shanghai</string>
+    <string name="arrive">LosAngeles</string>
+    <string name="Date">today</string>
+    <string name="searchflight">search</string>
+    <string name="latitude">latitude</string>
+</resources>
