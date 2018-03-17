@@ -1,6 +1,5 @@
 package com.example.wangmengyun.activity;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -22,6 +21,7 @@ import com.example.wangmengyun.lefei.R;
 import wangmengyun.view.FlightView;
 import wangmengyun.view.MyInfoView;
 import wangmengyun.view.TicketView;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     /**
@@ -79,7 +79,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     /**
      * 获取底部导航栏上的控件
      */
-    @SuppressLint("WrongViewCast")
     private void initBottomBar() {
         mBottomLayout = (LinearLayout) findViewById(R.id.main_bottom_bar);
         FlightBtn = findViewById(R.id.bottom_bar_Flight_btn);
@@ -104,13 +103,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //课程的点击事件
             case R.id.bottom_bar_Flight_btn:
                 clearBottomImageState();
-     //selectDisplayView(0);
-                Intent intent = new Intent(MainActivity.this, SearchFlightActivity.class);
+                //selectDisplayView(0);
+                Intent intent = new Intent(MainActivity.this,SearchFlightActivity.class);
                 startActivity(intent);
                 break;
             //习题的点击事件
             case R.id.bottom_bar_exercises_btn:
- //               clearBottomImageState();
+                //               clearBottomImageState();
                 selectDisplayView(1);
                 break;
             //我的点击事件

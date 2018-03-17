@@ -19,7 +19,7 @@ import java.util.Scanner;
      */
     public class NetworkUtils {
 
-        final static String Flight_BASE_URL ="39.108.51.161";
+        final static String Flight_BASE_URL ="https://api.github.com/search/repositories";
              //TODO   "https://api.github.com/search/repositories";
 
         final static String PARAM_QUERY = "q";
@@ -28,8 +28,8 @@ import java.util.Scanner;
          * The sort field. One of stars, forks, or updated.
          * Default: results are sorted by best match if no field is specified.
          */
-    //    final static String PARAM_SORT = "sort";
-    //    final static String sortBy = "stars";
+       final static String PARAM_SORT = "sort";
+        final static String sortBy = "stars";
 
         /**
          * Builds the URL used to query GitHub.
@@ -40,6 +40,7 @@ import java.util.Scanner;
         public static URL buildUrl(String flightSearchQuery) {
             Uri builtUri = Uri.parse(Flight_BASE_URL).buildUpon()
                     .appendQueryParameter(PARAM_QUERY, flightSearchQuery)
+                    .appendQueryParameter(PARAM_SORT,sortBy)
                     .build();
 
             URL url = null;

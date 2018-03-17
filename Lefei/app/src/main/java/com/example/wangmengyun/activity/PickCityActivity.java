@@ -20,7 +20,6 @@ import java.util.Collections;
 import java.util.List;
 
 import wangmengyun.view.CitySortModel;
-import wangmengyun.view.EditTextWithDel;
 import wangmengyun.view.PinyinComparator;
 import wangmengyun.view.SideBar;
 
@@ -28,7 +27,7 @@ import wangmengyun.view.SideBar;
 
 
 
-    public class CityActivity extends Activity {
+    public class PickCityActivity extends Activity {
     private ListView sortListView;
     private SideBar sideBar;
     private TextView dialog, mTvTitle;

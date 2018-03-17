@@ -11,4 +11,12 @@
         android:id="@+id/button_search"
         android:text="点击"/>
 
+    <EditText
+        android:id="@+id/et_flightlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    </EditText>
+
 </android.support.constraint.ConstraintLayout>
