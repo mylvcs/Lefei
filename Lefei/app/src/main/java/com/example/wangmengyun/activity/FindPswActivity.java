@@ -16,10 +16,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.wangmengyun.Utils.AnalysisUtils;
+import com.example.wangmengyun.Utils.MD5Utils;
 import com.example.wangmengyun.lefei.R;
 
-import wangmengyun.Utils.AnalysisUtils;
-import wangmengyun.Utils.MD5Utils;
 
 
 public class FindPswActivity extends AppCompatActivity {

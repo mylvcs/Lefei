@@ -14,14 +14,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.wangmengyun.lefei.R;
+import com.example.wangmengyun.view.CitySortModel;
+import com.example.wangmengyun.view.PinyinComparator;
+import com.example.wangmengyun.view.SideBar;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import wangmengyun.view.CitySortModel;
-import wangmengyun.view.PinyinComparator;
-import wangmengyun.view.SideBar;
 
 //import com.wangmengyun.view.PinyinUtils;
 

@@ -7,12 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.example.wangmengyun.Bean.Flight;
+import com.example.wangmengyun.adapter.FlightAdapter;
 import com.example.wangmengyun.lefei.R;
 
 import java.util.Arrays;
-
-import wangmengyun.Adapter.FlightAdapter;
-import wangmengyun.Bean.Flight;
 
 /**
  * A fragment containing the list view of Android versions.

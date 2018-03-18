@@ -16,11 +16,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.wangmengyun.Bean.UserBean;
+import com.example.wangmengyun.Utils.AnalysisUtils;
+import com.example.wangmengyun.Utils.DBUtils;
 import com.example.wangmengyun.lefei.R;
-
-import wangmengyun.Bean.UserBean;
-import wangmengyun.Utils.AnalysisUtils;
-import wangmengyun.Utils.DBUtils;
 
 
 public class UserInfoActivity extends AppCompatActivity implements View.OnClickListener {

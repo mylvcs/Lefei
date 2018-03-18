@@ -18,9 +18,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.wangmengyun.Utils.MD5Utils;
 import com.example.wangmengyun.lefei.R;
-
-import wangmengyun.Utils.MD5Utils;
 
 public class RegisterActivity extends AppCompatActivity {
     //标题

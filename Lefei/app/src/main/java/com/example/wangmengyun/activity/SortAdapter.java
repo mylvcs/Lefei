@@ -9,10 +9,10 @@ import android.widget.SectionIndexer;
 import android.widget.TextView;
 
 import com.example.wangmengyun.lefei.R;
+import com.example.wangmengyun.view.CitySortModel;
 
 import java.util.List;
 
-import wangmengyun.view.CitySortModel;
 
 public class SortAdapter extends BaseAdapter implements SectionIndexer {
     private List<CitySortModel> list = null;

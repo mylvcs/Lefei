@@ -17,10 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.wangmengyun.lefei.R;
-
-import wangmengyun.view.FlightView;
-import wangmengyun.view.MyInfoView;
-import wangmengyun.view.TicketView;
+import com.example.wangmengyun.view.FlightView;
+import com.example.wangmengyun.view.MyInfoView;
+import com.example.wangmengyun.view.TicketView;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {

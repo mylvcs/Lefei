@@ -32,4 +32,6 @@ dependencies {
     compile 'com.google.android.gms:play-services:9.8.0'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation files('src/main/libs/mongo-java-driver-3.0.0.jar')
+    implementation files('src/main/libs/pinyin4j-2.5.0.jar')
+    implementation files('src/main/libs/locSDK_3.1.jar')
 }
